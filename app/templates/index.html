@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image" href="https://pngimg.com/uploads/mars_planet/mars_planet_PNG13.png">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+  <header>
+    <div class="text-center">
+      <h1 class="display-4 text-white">Mission to Mars</h1>
+      <a class="btn btn-lg text-white mainbtn" href="/scrape">
+        Scrape New Data</a>
+    </div>
+  </header>
+  <main>
+    <div class="card transparent" id="mars-news">
+      <h5 class="card-header text-white">Latest Mars News</h5>
+      <div class="card-body">
+        <h5 class="card-title text-white">{{mars.news_title}}</h5>
+        <p class="card-text text-white">{{ mars.news_paragraph }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card transparent" id="mars-featured-image">
+          <h5 class="card-header text-white">Featured Image</h5>
+          <div class="card-body">
+            <p class="card-text">
+              <img class="card-img" src="{{mars.featured_image | default('static/images/error.png', true) }}" alt="
+                Featured Mars Image" class="img-responsive">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class=" row col-md-12 card transparent" id="mars-weather">
+          <h5 class="card-header text-white">Current Weather on Mars</h5>
+          <div class="card-body">
+            <p class="card-text text-white">{{ mars.weather }}</p>
+          </div>
+        </div>
+        <div class="row col-md-12 card transparent" id="mars-facts">
+          <h5 class="card-header text-white">Mars Facts</h5>
+          <div class="card-body">
+            <p class="card-text text-white">{{mars.facts | safe}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div  class="container" id="mars-hemispheres">
+        <div class="page-header">
+          <h2 class="text-white">Mars Hemispheres</h2>
+        </div>
+        <div class="row">        
+            {% for hemisphere in mars.hemispheres %}
+            <div class="media col-md-6">
+                <div class=" thumbnail">
+                  <img class="align-self-center mr-3 img-fluid" src="{{hemisphere.img_url }}" alt="Mars Hemisphere">
+                </div>
+                <div class="media-body">
+                  <h2 class="mt-0 mb-1 text-white">{{hemisphere.title}}</h5>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+    </div>
+  </main>
+</body>
+
+</html>
