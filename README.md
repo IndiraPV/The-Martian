@@ -7,7 +7,6 @@
 
 For this challenge developed a web application that scrapes various websites for data related to the Mission to Mars and 
 displays the information in a single HTML page. 
-The following outlines what you need to do.
 
 ### Step 1 - Scraping
 
@@ -26,7 +25,7 @@ news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up 
 
 ### JPL Mars Space Images - Featured Image
 
-* Visited the url for JPL Featured Space Image [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
+* JPL Featured Space Image [link](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
 
 * Used Selenium/Splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`.
 
@@ -80,9 +79,7 @@ hemisphere_image_urls = [
 
 ## Step 2 - MongoDB and Flask Application
 
-Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.Used Bootstrap4 to structure HTML template.
-
-
+The scraped data was imported in as Python dictionaries and persisted in MongoDB. With Flask templating created a new HTML page that displays all of the information that was scraped from the URLs above.Used Bootstrap4 to structure HTML template.
 
 
 ### Copyright
