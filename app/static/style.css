@@ -17,7 +17,7 @@
     margin: 0 auto;
     display: block;
     text-align:center;
-    background: url(https://scdn.slashgear.com/wp-content/uploads/2019/08/mars-wind-1280x720.jpg);
+    background: url(https://scdn.slashgear.com/wp-content/uploads/2019/08/mars-wind-1280x720.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
    
@@ -32,6 +32,9 @@
   padding-bottom: 9px;
   margin: 40px 0 20px;
   border-bottom: 3px solid #ec1616;
+}
+.text-martian {
+  color: #ec1616!important;
 }
 
  
