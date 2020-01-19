@@ -3,7 +3,11 @@
 For this challenge developed a web application that scrapes various websites for data related to the Mission to Mars and 
 displays the information in a single HTML page. 
 
+The webpage dispalys images stored in MongoDb from the last scraping. 
+
 ![mission_to_mars](Images/Martian.gif)
+
+On clicking Scrape New Data, the web page is refreshed with newly scraped data and the data is saved MongoDb overwriting the existing information.
 
 ![mission_to_mars2](Images/Martian2.gif)
 
