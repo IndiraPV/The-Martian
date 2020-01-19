@@ -3,7 +3,7 @@
 For this challenge developed a web application that scrapes various websites for data related to the Mission to Mars and 
 displays the information in a single HTML page. 
 
-![mission_to_mars](Images/Martian1.gif)
+![mission_to_mars](Images/Martian.gif)
 
 ![mission_to_mars2](Images/Martian2.gif)
 
